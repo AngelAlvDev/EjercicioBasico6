@@ -10,14 +10,17 @@ namespace EjercicioBasico6
     {
         static void Main(string[] args)
         {
-            Console.Write("Introduzca el numero a analizar: ");
-            String cadena = Console.ReadLine();
             Int16 sietes = 0;
-            foreach(Char numero in cadena){
-                if (numero == '7') {
+            Console.Write("Introduzca el numero a analizar: ");
+            Int16 numero = (Int16)Console.Read();
+            do
+            {
+                if (numero == '7')
+                {
                     sietes++;
                 }
-            }
+                numero = (Int16)Console.Read();
+            } while (numero != '\n');
             Console.WriteLine("El número de 7 introducido es " + sietes);
         }
     }
